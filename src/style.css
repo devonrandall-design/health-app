@@ -188,3 +188,18 @@ margin: 0px;
 .Urgent {
   background-color: #C06954;
 }
+
+.Mild-selected {
+ background-color:#9AB1A4;
+  color: #FFFFFF;
+}
+
+.Medium-selected {
+  background-color:#f6d793;
+   color: ;
+ }
+
+ .Urgent-selected {
+  background-color:#C06954;
+   color: #FFFFFF;
+ }
