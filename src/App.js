@@ -13,6 +13,8 @@ const day = new Date().getDate()
 const year = new Date().getFullYear() 
 const clockTime = new Date().getHours() + ':' + new Date().getMinutes()
 
+const timer = new Date().getMilliseconds()
+
 const [cTime, setTime] = useState(clockTime);
 
 
@@ -20,7 +22,6 @@ const [cTime, setTime] = useState(clockTime);
  useEffect(() => {
     setInterval(() => {
       setTime(clockTime);
-      console.log('working')
     }, 1000);
   });
 
