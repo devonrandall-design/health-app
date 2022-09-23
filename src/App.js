@@ -11,20 +11,46 @@ const month = new Date().toLocaleString(
 
 const day = new Date().getDate() 
 const year = new Date().getFullYear() 
-const clockTime = new Date().getHours() + ':' + new Date().getMinutes()
+ 
 
-const timer = new Date().getMilliseconds()
+let count = 30
 
-const [cTime, setTime] = useState(clockTime);
+const [cCount, setCount] = useState(count)
+
+const newTime = new Date().toLocaleTimeString()
+
+const [time, setTime] = useState(newTime);
+
 
 
 
  useEffect(() => {
-    setInterval(() => {
-      setTime(clockTime);
+   
+    const timer = setInterval(() => {
+      const newerTime = new Date().toLocaleTimeString('en-US')
+      setTime(newerTime)
     }, 1000);
-  });
+ 
+  }, []);
 
+  /*
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const date = new Date();
+      setDateTime({
+        hours: date.getHours(),
+        minutes: date.getMinutes(),
+        seconds: date.getSeconds()
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+
+
+
+  */
 
 
 
@@ -45,7 +71,7 @@ const [cTime, setTime] = useState(clockTime);
       </div>
       <div className="sub-header">
         <h3>{month} {day}, {year}</h3>
-        <p>{cTime}</p>
+        <p>{time}</p>
         </div>
         <div className="entry-header">
         <h3 className="entry-title">Entries</h3>
