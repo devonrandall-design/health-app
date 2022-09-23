@@ -17,9 +17,16 @@ let count = 30
 
 const [cCount, setCount] = useState(count)
 
-const newTime = new Date().toLocaleTimeString()
+//Timer
 
+const newTime = new Date().toLocaleTimeString()
 const [time, setTime] = useState(newTime);
+
+
+const [entries, addEntry] = useState([])
+const [urgency, setUrgency] = useState('Mild')
+
+
 
 
 
@@ -77,9 +84,10 @@ const [time, setTime] = useState(newTime);
         <h3 className="entry-title">Entries</h3>
         </div>
       <div className="mainbody">
-      <Entry />
+      {entries.map((entry, index) => {return <Entry index={index} entries={entries} urgency={urgency} /> })}
+      
       </div>
-      <Footer />
+      <Footer urgency={urgency} setUrgency={setUrgency} entries={entries} addEntry={addEntry} />
     </div>
   );
 }

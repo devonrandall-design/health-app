@@ -127,7 +127,7 @@ margin: 0px;
   width: 90%;
   gap: 10px;
   align-items: center;
-  height: 30%;
+  height: 50%;
   /* border: 1px solid black; */
   overflow-y: scroll;
 }
@@ -167,7 +167,6 @@ margin: 0px;
 
 
 .tag {
-background-color: #C3EBD4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,4 +175,16 @@ background-color: #C3EBD4;
   padding: 3px;
   border-radius: 30px;
 
+}
+
+.Mild {
+  background-color: #C3EBD4;
+}
+
+.Medium {
+  background-color: #f6d793;
+}
+
+.Urgent {
+  background-color: #C06954;
 }
