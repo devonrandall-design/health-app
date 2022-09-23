@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./style.css";
 import Footer from './footer.js'
+import Entry from './entry.js'
 
 export default function App() {
 
@@ -32,7 +33,7 @@ console.log(time)
         <h3 className="entry-title">Entries</h3>
         </div>
       <div className="mainbody">
-      
+      <Entry />
       </div>
       <Footer />
     </div>

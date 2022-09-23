@@ -18,7 +18,7 @@ html, body {
 
 .app-container {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 20px 0px 0px 0px;
   background-color: #F7F9F9;
   margin: auto;
@@ -119,13 +119,61 @@ margin: 0px;
 }
 
 .mainbody {
-  
+
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 20px auto;
+  width: 90%;
   gap: 10px;
   align-items: center;
-  height: 100vh;
-  border: 1px solid black;
+  height: 30%;
+  /* border: 1px solid black; */
   overflow-y: scroll;
+}
+
+.entry-card {
+  min-width: 450px;
+  max-width: 600px;
+  height: 80px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #E0E0E0;
+ border-radius: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  height: 50px;
+  padding: 10px 20px
+}
+
+.column h6, h3 {
+  line-height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+.column h6 {
+  color: #7C7C7C;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+.tag {
+background-color: #C3EBD4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60;
+  padding: 3px;
+  border-radius: 30px;
+
 }
