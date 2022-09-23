@@ -109,11 +109,17 @@ margin: 0px;
   font-weight: bold;
 }
 
+.entry-header {
+  height: 3rem;
+  width: 100%
+}
+
 .entry-title {
   margin: 20px 20px 20px 20px
 }
 
 .mainbody {
+  
   display: flex;
   flex-direction: column;
   width: 100%;
