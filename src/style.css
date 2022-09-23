@@ -132,7 +132,7 @@ margin: 0px;
 }
 
 .entry-card {
-  min-width: 335px;
+  min-width: 350px;
   height: 80px;
   display: flex;
   gap: 10px;
