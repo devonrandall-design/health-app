@@ -114,7 +114,9 @@ margin: 0px;
 
 .entry-header {
   height: 3rem;
-  width: 100%
+  width: 100%;
+  background-color: #F7F9F9;
+  box-shadow: 0px 20px 20px #F7F9F9;
 }
 
 .entry-title {
