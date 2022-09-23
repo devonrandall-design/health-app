@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./style.css";
 import Footer from './footer.js'
 import Entry from './entry.js'
@@ -11,11 +11,28 @@ const month = new Date().toLocaleString(
 
 const day = new Date().getDate() 
 const year = new Date().getFullYear() 
-const time = new Date().getHours() + ':' + new Date().getMinutes()
+const clockTime = new Date().getHours() + ':' + new Date().getMinutes()
+
+const [cTime, setTime] = useState(clockTime);
 
 
 
-console.log(time)
+ useEffect(() => {
+    setInterval(() => {
+      setTime(clockTime);
+      console.log('working')
+    }, 1000);
+  });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -27,7 +44,7 @@ console.log(time)
       </div>
       <div className="sub-header">
         <h3>{month} {day}, {year}</h3>
-        <p>{time}</p>
+        <p>{cTime}</p>
         </div>
         <div className="entry-header">
         <h3 className="entry-title">Entries</h3>
